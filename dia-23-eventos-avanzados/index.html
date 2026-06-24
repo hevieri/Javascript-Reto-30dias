@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario con Validación</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 400px; margin: 2rem auto; }
+    .campo { margin-bottom: 1rem; }
+    label { display: block; margin-bottom: 0.25rem; }
+    input { width: 100%; padding: 0.5rem; box-sizing: border-box; }
+    .error { color: #e74c3c; font-size: 0.8rem; margin-top: 0.25rem; display: none; }
+    input.invalido { border: 2px solid #e74c3c; }
+    input.valido { border: 2px solid #2ecc71; }
+    button { padding: 0.75rem; background: #3498db; color: white; border: none; width: 100%; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>Registro</h1>
+  <form id="registroForm">
+    <div class="campo">
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" required>
+      <div class="error" id="nombreError">Mínimo 3 caracteres</div>
+    </div>
+    <div class="campo">
+      <label for="email">Email</label>
+      <input type="email" id="email" required>
+      <div class="error" id="emailError">Email inválido</div>
+    </div>
+    <div class="campo">
+      <label for="password">Contraseña</label>
+      <input type="password" id="password" required>
+      <div class="error" id="passwordError">Mínimo 6 caracteres, 1 mayúscula y 1 número</div>
+    </div>
+    <button type="submit">Enviar</button>
+  </form>
+  <script src="script.js"></script>
+</body>
+</html>

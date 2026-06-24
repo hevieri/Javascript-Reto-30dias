@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reloj Digital</title>
+  <style>
+    body {
+      font-family: 'Courier New', monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #1a1a2e;
+      margin: 0;
+    }
+    .reloj {
+      background: #16213e;
+      padding: 2rem 3rem;
+      border-radius: 1rem;
+      box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+      text-align: center;
+    }
+    #hora {
+      font-size: 4rem;
+      color: #0ff;
+      letter-spacing: 0.2rem;
+    }
+    #fecha {
+      font-size: 1.2rem;
+      color: #aaa;
+      margin-top: 0.5rem;
+    }
+    button {
+      margin-top: 1rem;
+      padding: 0.5rem 1.5rem;
+      background: #0ff;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="reloj">
+    <div id="hora">00:00:00</div>
+    <div id="fecha">---</div>
+    <button id="btnFormato">Cambiar a 12h</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

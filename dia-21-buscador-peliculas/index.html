@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buscador de Películas</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
+    .buscador { text-align: center; margin-bottom: 2rem; }
+    input { padding: 0.75rem; width: 300px; font-size: 1rem; }
+    button { padding: 0.75rem 1.5rem; font-size: 1rem; background: #3498db; color: white; border: none; cursor: pointer; }
+    .peliculas { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; }
+    .pelicula { border: 1px solid #ddd; border-radius: 0.5rem; padding: 1rem; text-align: center; }
+    .pelicula img { max-width: 100%; height: auto; }
+    .loading { text-align: center; color: #888; }
+    .error { text-align: center; color: #e74c3c; }
+  </style>
+</head>
+<body>
+  <h1 style="text-align:center">Buscador de Películas</h1>
+  <div class="buscador">
+    <input type="text" id="busquedaInput" placeholder="Buscar película...">
+    <button id="btnBuscar">Buscar</button>
+  </div>
+  <div class="peliculas" id="contenedor"></div>
+  <script src="script.js"></script>
+</body>
+</html>
