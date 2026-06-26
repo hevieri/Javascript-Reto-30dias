@@ -20,6 +20,6 @@
      - Mostrar cuál gana la carrera
 
   +++ EJERCICIO EXTRA +++
-  - Crea una función sleep(ms) que devuelva una promesa
-  - Úsala con async/await para crear un temporizador
+  - Creá una función sleep(ms) que devuelva una promesa
+  - Encadená varias promesas con .then() para simular una cadena de tareas
 */

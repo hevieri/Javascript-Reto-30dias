@@ -17,7 +17,8 @@
   5. Clonar un objeto anidado con structuredClone o spread anidado
 
   +++ EJERCICIO EXTRA +++
-  - Crea una función que acepte un objeto de opciones con default values
-    function configurar({ host = "localhost", port = 3000, ssl = false } = {})
-  - Úsala con diferentes configuraciones parciales
+  - Dado un array de usuarios [{nombre, email, pais}], usá destructuring para:
+    a) Extraer solo los nombres en un nuevo array
+    b) Intercambiar el primer y último elemento
+    c) Crear un objeto con todos los emails como propiedades
 */

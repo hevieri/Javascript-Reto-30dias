@@ -18,6 +18,8 @@
      [{nombre, ciudad}] → { "Madrid": [pers1, pers2], "Barcelona": [pers3] }
 
   +++ EJERCICIO EXTRA +++
-  - Implementa tu propia versión de map, filter y reduce
-    function miMap(arr, callback) { ... }
+  - Dado un array de objetos [{nombre, edad, ciudad}], obtené:
+    a) Solo nombres de mayores de 20
+    b) La suma de edades
+    c) Personas agrupadas por ciudad (usando reduce)
 */

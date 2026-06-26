@@ -20,6 +20,6 @@
      - Consultar stock de un producto
 
   +++ EJERCICIO EXTRA +++
-  - Usa WeakSet para evitar que un objeto sea procesado dos veces
-  - Crea un caché simple con WeakMap para resultados de funciones
+  - Creá un Map que guarde como clave un objeto producto y como valor su cantidad
+  - Usá Set para encontrar elementos únicos entre dos arrays de números
 */

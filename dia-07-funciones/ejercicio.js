@@ -19,8 +19,8 @@
        en español, inglés o portugués
 
   +++ EJERCICIO EXTRA +++
-  - Crea una función memoize(fn) que guarde resultados en caché
-  - Úsala con una función costosa (ej: fibonacci)
+  - Creá una función que reciba un número y devuelva true si es par, false si es impar
+  - Creá una función que reciba un array de números y devuelva solo los pares (usando la función anterior)
 */
 
 // --- Tu código aquí ---

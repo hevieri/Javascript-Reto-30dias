@@ -15,7 +15,7 @@
      - Método que devuelva "Vive en calle, ciudad, pais"
 
   +++ EJERCICIO EXTRA +++
-  - Crea 3 objetos producto y agrégalos al carrito
+  - Creá 3 objetos producto y agregalos al carrito
   - El carrito debe calcular el total correctamente
-  - Haz que eliminar reduzca la cantidad o quite el item
+  - Hacé que eliminar reduzca la cantidad o quite el item
 */
