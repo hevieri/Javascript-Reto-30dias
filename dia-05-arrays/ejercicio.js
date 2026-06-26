@@ -1,47 +1,29 @@
-// DÍA 5: Arrays - creación, índices, métodos básicos
-// Usá solo: variables, arrays, índices, métodos de array, console.log
-// (NO uses funciones todavía)
+/*
+  DÍA 5: Arrays - creación, índices, métodos básicos
 
-// 1 - Crear y acceder --------------------------------------------
-let frutas = ["manzana", "pera", "banana", "naranja", "uva"]
+  Usá solo: variables, arrays, índices, métodos de array, console.log
+  (NO uses funciones todavía)
 
-console.log(frutas[0])            // primera
-console.log(frutas[frutas.length - 1])  // última
-console.log(frutas.length)        // cantidad
+  1 - Declará frutas = ["manzana", "pera", "banana", "naranja", "uva"]
+      Mostrá frutas[0] (primera)
+      Mostrá frutas[frutas.length - 1] (última)
+      Mostrá frutas.length (cantidad)
 
+  2 - Declará lista = []
+      Agregá "leche", "pan", "huevos", "queso" con push
+      Mostrá lista
+      Sacá el último con pop y mostrá
+      Agregá "arroz" al inicio con unshift y mostrá
+      Sacá el primero con shift y mostrá
 
-// 2 - Agregar y sacar elementos -----------------------------------
-let lista = []
+  3 - Declará numeros = [10, 25, 30, 45, 50, 25]
+      Mostrá si incluye 30 (includes)
+      Mostrá la posición del primer 25 (indexOf)
+      Mostrá un string con todos separados por " - " (join)
 
-lista.push("leche")     // agrega al final
-lista.push("pan")
-lista.push("huevos")
-lista.push("queso")
-console.log(lista)
+  4 - Declará desordenado = [3, 1, 8, 5, 2]
+      Ordenalo con sort((a, b) => a - b) y mostrá
+      Dale la vuelta con reverse y mostrá
+*/
 
-lista.pop()             // saca el último
-console.log(lista)
-
-lista.unshift("arroz")  // agrega al inicio
-console.log(lista)
-
-lista.shift()           // saca el primero
-console.log(lista)
-
-
-// 3 - Buscar en arrays -------------------------------------------
-let numeros = [10, 25, 30, 45, 50, 25]
-
-console.log(numeros.includes(30))   // true si existe
-console.log(numeros.indexOf(25))    // posición del primer 25
-console.log(numeros.lastIndexOf(25)) // posición del último 25
-console.log(numeros.join(" - "))    // convertir a string
-
-
-// 4 - Ordenar -----------------------------------------------------
-let desordenado = [3, 1, 8, 5, 2]
-desordenado.sort((a, b) => a - b)  // ordenar números
-console.log(desordenado)
-
-desordenado.reverse()
-console.log(desordenado)
+// --- Escribí tu código acá ---

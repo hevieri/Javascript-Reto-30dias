@@ -1,72 +1,25 @@
-// DÍA 4: Condicionales (if, else, switch, ternario)
-// Usá solo: variables, if/else, switch, ternario, console.log
-// (NO uses funciones ni bucles)
+/*
+  DÍA 4: Condicionales (if, else, switch, ternario)
 
-// 1 - Edades ----------------------------------------------------
-let edad = 25
+  Usá solo: variables, if/else, switch, ternario, console.log
+  (NO uses funciones ni bucles)
 
-if (edad >= 18) {
-  console.log("Mayor de edad")
-} else {
-  console.log("Menor de edad")
-}
+  1 - Declará edad = 25
+      if (edad >= 18) mostrá "Mayor de edad", si no "Menor de edad"
+      Cambiá la edad a 15 y probá de nuevo
 
-// Cambiá la edad y correlo de nuevo para probar
+  2 - Declará dia = 3
+      Usá switch para mostrar el nombre del día:
+      1 → "Lunes", 2 → "Martes", ... 7 → "Domingo"
+      default → "Día inválido"
 
+  3 - Declará temperatura = 30
+      Usá el operador ternario: temperatura > 25 ? "Hace calor" : "Está fresco"
+      Mostrá el resultado
 
-// 2 - Switch (día de la semana) ----------------------------------
-let dia = 3
-let nombreDia = ""
+  4 - Declará nota = 85
+      if/else if para clasificar:
+      90+ → "A", 80+ → "B", 70+ → "C", 60+ → "D", menos → "F"
+*/
 
-switch (dia) {
-  case 1:
-    nombreDia = "Lunes"
-    break
-  case 2:
-    nombreDia = "Martes"
-    break
-  case 3:
-    nombreDia = "Miércoles"
-    break
-  case 4:
-    nombreDia = "Jueves"
-    break
-  case 5:
-    nombreDia = "Viernes"
-    break
-  case 6:
-    nombreDia = "Sábado"
-    break
-  case 7:
-    nombreDia = "Domingo"
-    break
-  default:
-    nombreDia = "Día inválido"
-}
-
-console.log(nombreDia)
-
-
-// 3 - Ternario ---------------------------------------------------
-let temperatura = 30
-let clima = temperatura > 25 ? "Hace calor" : "Está fresco"
-console.log(clima)
-
-
-// 4 - Múltiples condiciones --------------------------------------
-let nota = 85
-let calificacion = ""
-
-if (nota >= 90) {
-  calificacion = "A"
-} else if (nota >= 80) {
-  calificacion = "B"
-} else if (nota >= 70) {
-  calificacion = "C"
-} else if (nota >= 60) {
-  calificacion = "D"
-} else {
-  calificacion = "F"
-}
-
-console.log(calificacion)
+// --- Escribí tu código acá ---
