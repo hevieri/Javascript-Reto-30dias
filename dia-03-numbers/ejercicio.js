@@ -1,25 +1,36 @@
-/*
-  DÍA 3: Numbers, operadores y Math
+// DÍA 3: Numbers, operadores y Math
+// Usá solo: variables, operadores (+, -, *, /, %, **), Math, console.log
+// (NO uses funciones, condicionales ni bucles — eso viene después)
 
-  Instrucciones:
-  1. CALCULADORA DE PROPINA:
-     - Función calcularPropina(total, porcentaje) que devuelva el monto
-     - Redondear a 2 decimales
-     - Si el total es > 200, aplicar 10%; si no, 15%
+// 1 - Operaciones básicas ----------------------------------------
+let a = 15
+let b = 4
 
-  2. CONVERSOR DE TEMPERATURA:
-     - celsiusAFahrenheit(celsius)
-     - fahrenheitACelsius(fahrenheit)
-     - Ambas redondean a 1 decimal
+console.log(a + b)    // suma
+console.log(a - b)    // resta
+console.log(a * b)    // multiplicación
+console.log(a / b)    // división
+console.log(a % b)    // resto
+console.log(a ** b)   // exponente
 
-  3. Dado un array de precios, calcula:
-     - El precio más alto (Math.max)
-     - El precio más bajo (Math.min)
-     - El promedio
 
-  +++ EJERCICIO EXTRA +++
-  - Genera un número aleatorio entre 1 y 100
-  - El usuario tiene 3 intentos para adivinarlo (simulado con funciones)
-*/
+// 2 - Redondeo ----------------------------------------------------
+let numero = 4.7
 
-// --- Tu código aquí ---
+console.log(Math.round(numero))   // redondeo normal
+console.log(Math.ceil(numero))    // para arriba
+console.log(Math.floor(numero))   // para abajo
+console.log(Math.trunc(numero))   // saca decimales
+
+let decimal = 3.14159
+console.log(Number(decimal.toFixed(2)))  // solo 2 decimales
+
+
+// 3 - Aleatorios --------------------------------------------------
+console.log(Math.random())                  // entre 0 y 1
+console.log(Math.floor(Math.random() * 6) + 1)  // dado 1-6
+
+
+// 4 - Máximo y mínimo ---------------------------------------------
+console.log(Math.max(10, 25, 3, 18, 7))
+console.log(Math.min(10, 25, 3, 18, 7))

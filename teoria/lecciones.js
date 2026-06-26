@@ -169,7 +169,7 @@ Math.min(1, 5, 3)  // 1
 Math.abs(-5)       // 5
 Math.pow(2, 3)     // 8` },
       { tipo: 'destacado', v: '<strong>⚠️</strong> <code>0.1 + 0.2 === 0.3</code> es <code>false</code>. Los números en punto flotante tienen imprecisiones. Para dinero, usá enteros (centavos) o librerías como Decimal.' },
-      { tipo: 'ejercicio', v: 'Abrí dia-03-numbers/ejercicio.js. Calculadora de propina, conversor de temperatura y análisis de precios.' },
+      { tipo: 'ejercicio', v: 'Abrí dia-03-numbers/ejercicio.js. Hacé operaciones aritméticas, probá redondeo, generá números aleatorios y encontrá máximos/mínimos. Solo con variables, operadores y Math — sin funciones todavía.' },
     ]
   },
   {
