@@ -11,9 +11,9 @@ Reto práctico para aprender JavaScript desde cero en 30 días. Un concepto por 
 | **1** | Variables (`let`, `const`), tipos de datos, `console.log` | Declarar variables de cada tipo y mostrarlas en consola |
 | **2** | Strings, template literals, métodos de string | Manipular textos con métodos de string, template literals y console.log |
 | **3** | Numbers, operadores, `Math` | Operaciones, redondeo, aleatorios, máximos/mínimos |
-| **4** | Condicionales: `if`, `else`, `switch`, ternario | Juego de adivinar número + validador de contraseñas |
-| **5** | Arrays: creación, índices, métodos básicos (`push`, `pop`, `shift`, `unshift`, `includes`, `indexOf`) | Lista de compras: agregar/eliminar/buscar items |
-| **6** | Loops: `for`, `while`, `do...while`, `for...of` | Tabla de multiplicar + sumar solo pares de un array |
+| **4** | Condicionales: `if`, `else`, `switch`, ternario | Clasificar edades, días del switch, ternario, notas |
+| **5** | Arrays: creación, índices, métodos básicos (`push`, `pop`, `shift`, `unshift`, `includes`, `indexOf`) | Crear arrays, push/pop/shift/unshift, buscar, ordenar |
+| **6** | Loops: `for`, `while`, `do...while`, `for...of` | Contar, tablas, recorrer arrays, sumar pares |
 | **7** | Functions: declaración, expresión, arrow functions, parámetros default | Función que calcule factorial + función que valide palíndromos |
 
 ## 📅 Semana 2 — Arrays, Objetos y DOM

@@ -1,30 +1,51 @@
-/*
-  DÍA 6: Loops (for, while, for...of)
+// DÍA 6: Loops (for, while, for...of)
+// Usá solo: variables, loops, console.log
+// (NO uses funciones todavía)
 
-  Instrucciones:
-  1. TABLA DE MULTIPLICAR:
-     - Función tablaDel(numero) que imprima del 1 al 10
-     - Usa for
+// 1 - for: contar del 1 al 10 ------------------------------------
+console.log("Contar del 1 al 10:")
+for (let i = 1; i <= 10; i++) {
+  console.log(i)
+}
 
-  2. SUMAR PARES:
-     - Función sumarPares(array) que sume solo los números pares
-     - Usa for...of
 
-  3. NÚMERO SECRETO (while):
-     - Genera un número aleatorio 1-100
-     - Bucle while que "intenta" adivinarlo
-     - Cuenta cuántos intentos tomó
+// 2 - for: tabla del 5 -------------------------------------------
+console.log("Tabla del 5:")
+for (let i = 1; i <= 10; i++) {
+  console.log("5 x " + i + " = " + (5 * i))
+}
 
-  4. PIRÁMIDE DE ASTERISCOS:
-     - Función pirámide(altura) que dibuje:
-       *
-      ***
-     *****
 
-  +++ EJERCICIO EXTRA +++
-  - Dado un array de objetos {nombre, edad}, encuentra el mayor usando un loop
-  - Crea una función que aplane un array anidado [[1,2],[3,[4]]] → [1,2,3,4]
-    (sin usar .flat())
-*/
+// 3 - for: recorrer array ----------------------------------------
+let frutas = ["manzana", "pera", "banana", "naranja"]
 
-// --- Tu código aquí ---
+for (let i = 0; i < frutas.length; i++) {
+  console.log(frutas[i])
+}
+
+
+// 4 - for...of: recorrer array más simple ------------------------
+for (let fruta of frutas) {
+  console.log("Me gusta la " + fruta)
+}
+
+
+// 5 - while: contar hasta llegar a 50 de 5 en 5 ------------------
+let contador = 0
+
+while (contador <= 50) {
+  console.log(contador)
+  contador = contador + 5
+}
+
+
+// 6 - sumar solo pares del 1 al 20 -------------------------------
+let suma = 0
+
+for (let i = 1; i <= 20; i++) {
+  if (i % 2 === 0) {
+    suma = suma + i
+  }
+}
+
+console.log("Suma de pares del 1 al 20:", suma)

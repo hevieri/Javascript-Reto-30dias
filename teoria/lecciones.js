@@ -213,7 +213,7 @@ switch (dia) {
 }` },
       { tipo: 'texto', v: 'Siempre poné <code>break</code> o <code>return</code> en cada case, o si no "cae" al siguiente (fall-through).' },
       { tipo: 'destacado', v: '<strong>💡</strong> Los valores <em>falsy</em> en JS: <code>false</code>, <code>0</code>, <code>""</code> (string vacío), <code>null</code>, <code>undefined</code>, <code>NaN</code>. Todo lo demás es <em>truthy</em>.' },
-      { tipo: 'ejercicio', v: 'Abrí dia-04-condicionales/ejercicio.js. Juego adivinar número, validador de contraseña y días de la semana.' },
+      { tipo: 'ejercicio', v: 'Abrí dia-04-condicionales/ejercicio.js. Clasificá edades con if/else, días de la semana con switch, clima con ternario, y notas con múltiples condiciones.' },
     ]
   },
   {
@@ -242,7 +242,7 @@ arr.indexOf(2)     // 1
 arr.join(" - ")    // "1 - 2 - 3"` },
       { tipo: 'texto', v: '<code>push</code> y <code>pop</code> son rápidos (<em>O(1)</em>). <code>unshift</code> y <code>shift</code> son lentos porque mueven todos los índices.' },
       { tipo: 'destacado', v: '<strong>⚠️</strong> <code>const arr = [1,2,3]</code> — aunque sea <code>const</code>, podés modificar su contenido (<code>push</code>, etc.). <code>const</code> evita reasignar la variable, no modificar el array.' },
-      { tipo: 'ejercicio', v: 'Abrí dia-05-arrays/ejercicio.js. Lista de compras con agregar/eliminar/buscar, invertir array y frecuencia.' },
+      { tipo: 'ejercicio', v: 'Abrí dia-05-arrays/ejercicio.js. Creá arrays, accedé por índice, usá push/pop/shift/unshift, includes/indexOf, join, sort y reverse.' },
     ]
   },
   {
@@ -284,7 +284,7 @@ do {
   x++
 } while (x < 0)  // imprime 0 una vez` },
       { tipo: 'destacado', v: '<strong>💡</strong> <code>break</code> corta el loop. <code>continue</code> salta a la siguiente iteración. En <code>for</code> clásico podés usar <code>let i</code> o <code>var i</code> — <code>let</code> tiene scope de bloque, <code>var</code> no.' },
-      { tipo: 'ejercicio', v: 'Abrí dia-06-loops/ejercicio.js. Tabla de multiplicar, sumar pares, adivinar número, pirámide.' },
+      { tipo: 'ejercicio', v: 'Abrí dia-06-loops/ejercicio.js. for para contar y tablas, recorrer arrays con for/for...of, while para saltos, suma con condición.' },
     ]
   },
   {
