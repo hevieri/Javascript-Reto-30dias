@@ -252,9 +252,23 @@ arr.join(" - ")    // "1 - 2 - 3"` },
     contenido: [
       { tipo: 'texto', v: 'Los loops permiten ejecutar código repetidamente. Cada tipo tiene su uso ideal.' },
       { tipo: 'subtitulo', v: 'for — cuando sabés cuántas veces' },
+      { tipo: 'texto', v: 'El <code>for</code> tiene 3 partes separadas por punto y coma:' },
+      { tipo: 'lista', v: [
+        '<code>let i = 0</code> — Creás una variable (podés llamarla como quieras: i, x, numero, lo que sea). Le das el valor inicial.',
+        '<code>i < 5</code> — La condición. Mientras sea true, el código se ejecuta. Cuando i llega a 5, es false y el loop PARA.',
+        '<code>i++</code> — Después de cada vuelta, sumale 1 a i. Es igual a <code>i = i + 1</code>.',
+      ] },
       { tipo: 'codigo', v: `for (let i = 0; i < 5; i++) {
   console.log(i)  // 0,1,2,3,4
 }
+
+// Paso a paso:
+// i=0 → 0<5 true → imprime 0 → i++ → i=1
+// i=1 → 1<5 true → imprime 1 → i++ → i=2
+// i=2 → 2<5 true → imprime 2 → i++ → i=3
+// i=3 → 3<5 true → imprime 3 → i++ → i=4
+// i=4 → 4<5 true → imprime 4 → i++ → i=5
+// i=5 → 5<5 FALSE → PARA
 
 // Recorrer array
 const frutas = ["manzana", "pera", "banana"]
