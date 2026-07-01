@@ -27,3 +27,21 @@
 */
 
 // --- Escribí tu código acá ---
+//1.
+let frutas = ['manzana', 'pera', 'banana', 'naranja','uva'];
+console.log(frutas[0]);
+console.log(frutas[frutas.length - 1]);
+console.log(frutas.length);
+
+//2.
+let lista = [];
+lista.push('leche', 'pan', 'huevos', 'queso');
+console.log(lista);
+
+let ultimo = lista.pop();
+console.log(ultimo);
+
+lista.unshift('arroz');
+console.log(lista);
+
+
