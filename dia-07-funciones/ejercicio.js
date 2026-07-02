@@ -24,3 +24,24 @@
 */
 
 // --- Tu código aquí ---
+//1.
+function factorial(n){
+   if(n === 0 || n === 1) {
+      return 1;
+   }
+   return n * factorial(n - 1);
+}
+
+//4.
+function saludar(nombre = "amigo", idioma = "es") {
+   switch (idioma) {
+      case "es":
+         return `Hola, ${nombre}!`;
+      case "en":
+         return `Hello, ${nombre}!`;
+      case "pt":
+         return `Olá, ${nombre}!`;
+      default:
+         return `Hola, ${nombre}!`;
+   }
+   
