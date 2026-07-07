@@ -19,3 +19,17 @@
   - El carrito debe calcular el total correctamente
   - Hacé que eliminar reduzca la cantidad o quite el item
 */
+
+//1.
+const producto = {
+  nombre: 'Camiseta',
+  precio: 20,
+  stock: 50,
+  descuento: 0.1, // 10% de descuento
+  calcularPrecioFinal: function() {
+    return this.precio - (this.precio * this.descuento);
+  },
+  mostrarInfo: function() {
+    return `Producto: ${this.nombre}, Precio: $${this.precio}, Stock: ${this.stock}`;
+  }
+};

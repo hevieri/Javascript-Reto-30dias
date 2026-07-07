@@ -342,7 +342,7 @@ saludar("Ana")   // "Hola Ana"` },
     titulo: 'Objetos literales',
     subtitulo: 'Propiedades, métodos, this, objetos anidados',
     contenido: [
-      { tipo: 'texto', v: 'Los objetos son colecciones de pares clave-valor. Son la base de casi todo en JS.' },
+      { tipo: 'texto', v: 'Los objetos son colecciones de pares <strong>clave-valor</strong>. Son la base de casi todo en JS. Agrupan datos que van juntos (como una ficha con varias variables).' },
       { tipo: 'subtitulo', v: 'Crear y acceder' },
       { tipo: 'codigo', v: `const usuario = {
   nombre: "Ana",
@@ -350,33 +350,150 @@ saludar("Ana")   // "Hola Ana"` },
   "email personal": "ana@mail.com"  // clave con espacio
 }
 
-// Acceder
+// Acceder con punto (cuando sabés el nombre)
 usuario.nombre           // "Ana"
+
+// Acceder con corchetes (cuando hay espacio o es dinámico)
 usuario["edad"]          // 25
 usuario["email personal"] // "ana@mail.com"
 
 // Modificar
 usuario.edad = 26
-usuario.pais = "MX"      // agregar nueva propiedad
+
+// Agregar nueva propiedad
+usuario.pais = "MX"
 
 // Eliminar
 delete usuario.edad` },
-      { tipo: 'subtitulo', v: 'Propiedades dinámicas' },
-      { tipo: 'codigo', v: `const key = "email"
-const user = {
-  [key]: "ana@mail.com",
-  ["id_" + Date.now()]: 123
+      { tipo: 'destacado', v: '<strong>💡</strong> Los objetos son <strong>fichas que agrupan datos relacionados</strong>. En vez de tener <code>let nombre = "Ana"</code>, <code>let edad = 25</code>, <code>let email = "..."</code> sueltos, los metés en un mismo objeto <code>usuario</code>. Todo lo de Ana está en una sola ficha.' },
+      { tipo: 'subtitulo', v: 'Shorthand properties (atajo)' },
+      { tipo: 'codigo', v: `const nombre = "Ana"
+const edad = 25
+
+// En vez de escribir { nombre: nombre, edad: edad }
+const usuario = { nombre, edad }
+// Si la variable se llama igual que la clave, va sola` },
+      { tipo: 'subtitulo', v: 'Recorrer un objeto — for...in' },
+      { tipo: 'codigo', v: `const usuario = { nombre: "Ana", edad: 25, pais: "MX" }
+
+for (const clave in usuario) {
+  console.log(clave, "→", usuario[clave])
+}
+// nombre → Ana
+// edad → 25
+// pais → MX` },
+      { tipo: 'subtitulo', v: 'Object.keys, values, entries — ¿qué hace cada uno?' },
+      { tipo: 'texto', v: 'Pensá en un objeto como una caja con etiquetas. <strong>keys</strong> te da las etiquetas. <strong>values</strong> te da el contenido. <strong>entries</strong> te da todo junto.' },
+      { tipo: 'codigo', v: `const usuario = { nombre: "Ana", edad: 25, pais: "MX" }
+
+// SOLO las etiquetas
+Object.keys(usuario)
+// → ["nombre", "edad", "pais"]
+
+// SOLO los valores
+Object.values(usuario)
+// → ["Ana", 25, "MX"]
+
+// TODO: cada propiedad como [etiqueta, valor]
+Object.entries(usuario)
+// → [["nombre","Ana"], ["edad",25], ["pais","MX"]]
+
+// Recorrer con for...of
+for (const [clave, valor] of Object.entries(usuario)) {
+  console.log(clave, valor)
 }` },
       { tipo: 'subtitulo', v: 'Métodos y this' },
       { tipo: 'codigo', v: `const perro = {
   nombre: "Firulais",
-  ladrar() {   // método shorthand
+  ladrar() {   // método shorthand (sin :function)
     return \`\${this.nombre} dice guau\`
   }
 }
 perro.ladrar() // "Firulais dice guau"` },
-      { tipo: 'texto', v: '<code>this</code> hace referencia al objeto dueño del método. <strong>No funciona igual en arrow functions</strong>.' },
-      { tipo: 'ejercicio', v: 'Abrí dia-08-objetos/ejercicio.js. Objeto producto con descuento, carrito de compras, objeto anidado.' },
+      { tipo: 'texto', v: '<code>this</code> significa <strong>"este objeto"</strong>. Cuando un método usa <code>this.nombre</code>, está diciendo "el nombre de este objeto". Sin <code>this</code>, buscaría una variable llamada <code>nombre</code> fuera del objeto.' },
+      { tipo: 'codigo', v: `let precio = 100  // variable global
+
+const producto = {
+  precio: 25,
+  calcular() {
+    // Sin this → usa la variable global (100)
+    // Con this → usa producto.precio (25)
+    return this.precio - (this.precio * 10 / 100)
+  }
+}
+producto.calcular() // 22.5 ✅
+// Si usara "precio" a secas → 90 ❌` },
+      { tipo: 'destacado', v: '<strong>⚠️</strong> Las arrow functions <strong>NO</strong> tienen su propio <code>this</code>. Lo heredan del contexto donde fueron creadas. Para métodos de objeto, usá la sintaxis <code>metodo() { }</code>.' },
+      { tipo: 'subtitulo', v: 'Objetos anidados' },
+      { tipo: 'codigo', v: `const persona = {
+  nombre: "Ana",
+  direccion: {
+    calle: "Av. Siempre Viva",
+    ciudad: "Buenos Aires",
+    pais: "Argentina"
+  },
+  trabajo: {
+    empresa: "Tech Corp",
+    puesto: "Dev"
+  }
+}
+
+// Acceder a objetos anidados
+persona.direccion.ciudad   // "Buenos Aires"
+persona.trabajo.puesto     // "Dev"
+
+// Optional chaining — si algo no existe, no rompe
+persona.direccion?.calle    // "Av. Siempre Viva"
+persona.telefono?.codigo    // undefined (no rompe)
+// Sin ?. explotaría: Cannot read properties of undefined` },
+      { tipo: 'subtitulo', v: 'Arrays de objetos' },
+      { tipo: 'codigo', v: `const sponsors = [
+  {
+    nombre: "Coca-Cola",
+    barrio: "Palermo",
+    instagram: "@cocacola",
+    twitter: "@coca_cola"
+  },
+  {
+    nombre: "Fanta",
+    barrio: "Belgrano",
+    instagram: "@fanta",
+    twitter: "@fanta"
+  }
+]
+
+// Acceder
+sponsors[0].instagram  // "@cocacola"
+sponsors[1].twitter    // "@fanta"
+
+// Recorrer
+for (const s of sponsors) {
+  console.log(s.nombre, s.barrio, s.instagram)
+}` },
+      { tipo: 'texto', v: 'Esta estructura (array de objetos) es la más común en JS. APIs, bases de datos, configuraciones — todo se representa así.' },
+      { tipo: 'subtitulo', v: 'Saber si una propiedad existe' },
+      { tipo: 'codigo', v: `const user = { nombre: "Ana", edad: 25 }
+
+"nombre" in user       // true
+"email" in user        // false
+
+user.hasOwnProperty("nombre")  // true
+user.hasOwnProperty("email")   // false
+
+// Si accedés a una propiedad que no existe → undefined
+user.email             // undefined
+user.email ?? "no tiene"  // "no tiene" (nullish coalescing)` },
+      { tipo: 'subtitulo', v: 'Spread en objetos (...)' },
+      { tipo: 'codigo', v: `const base = { a: 1, b: 2 }
+const copia = { ...base }          // { a:1, b:2 }
+
+const extendido = { ...base, c: 3 } // { a:1, b:2, c:3 }
+
+const concreto = { a: 1, b: 2 }
+const variante = { ...concreto, b: 99 }  // { a:1, b:99 } (b se pisa)
+// El orden importa: el último gana` },
+      { tipo: 'destacado', v: '<strong>💡</strong> <strong>¿Cuándo usar objeto y cuándo no?</strong> Usá objeto cuando varias variables <strong>siempre van juntas</strong> (nombre + precio + stock de un producto). No uses objeto si es un solo valor suelto. Si tenés varios objetos del mismo tipo, metelos en un <strong>array</strong>.' },
+      { tipo: 'ejercicio', v: 'Abrí dia-08-objetos/ejercicio.js. Objeto producto con descuento, carrito de compras, objeto anidado con dirección y array de objetos.' },
     ]
   },
   {
