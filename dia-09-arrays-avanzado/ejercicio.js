@@ -2,24 +2,60 @@
   DÍA 9: Arrays avanzado - map, filter, reduce
 
   Instrucciones:
-  1. map: Duplicar cada número de un array  [1,2,3] → [2,4,6]
 
-  2. filter: Filtrar personas > 18 años de un array de objetos
+  1. map - IVA:
+     Tenés precios sin IVA: [100, 250, 500, 1200, 80]
+     Usá map para obtener los precios con IVA (21%).
 
-  3. reduce: Sumar todos los precios de un carrito
+  2. map - Temperaturas:
+     Tenés [0, 25, 30, 100, -5] en Celsius.
+     Usá map para pasarlos a Fahrenheit: F = C * 9/5 + 32.
 
-  4. ENCADENAMIENTO:
-     Dado un array de números:
+  3. map - Extraer datos:
+     const usuarios = [
+       { nombre: "Ana", edad: 25 },
+       { nombre: "Luis", edad: 30 },
+       { nombre: "Carla", edad: 22 }
+     ]
+     Usá map para obtener solo los nombres.
+
+  4. filter:
+     Del array de usuarios, filtrá los mayores de 18 (>18).
+
+  5. reduce:
+     Sumá todos los precios de un carrito: [1500, 2300, 800, 4200].
+
+  6. ENCADENAMIENTO:
+     Dado [12, 5, 8, 21, 3, 14, 7]:
      - Filtrar solo pares
      - Multiplicar cada uno por 3
      - Sumar el resultado
 
-  5. Agrupar personas por ciudad usando reduce
-     [{nombre, ciudad}] → { "Madrid": [pers1, pers2], "Barcelona": [pers3] }
+  7. Agrupar personas por ciudad usando reduce:
+     const personas = [
+       { nombre: "Ana", ciudad: "Madrid" },
+       { nombre: "Luis", ciudad: "Barcelona" },
+       { nombre: "Carla", ciudad: "Madrid" }
+     ]
+     → { "Madrid": ["Ana", "Carla"], "Barcelona": ["Luis"] }
 
   +++ EJERCICIO EXTRA +++
-  - Dado un array de objetos [{nombre, edad, ciudad}], obtené:
-    a) Solo nombres de mayores de 20
+  - Del array de usuarios [{nombre, edad, ciudad}], obtené:
+    a) Solo nombres de los mayores de 20
     b) La suma de edades
     c) Personas agrupadas por ciudad (usando reduce)
 */
+
+const precios = [100, 250, 500, 1200, 80];
+const celsius = [0, 25, 30, 100, -5];
+const usuarios = [
+  { nombre: "Ana", edad: 25 },
+  { nombre: "Luis", edad: 30 },
+  { nombre: "Carla", edad: 22 }
+];
+const carrito = [1500, 2300, 800, 4200];
+const personas = [
+  { nombre: "Ana", ciudad: "Madrid" },
+  { nombre: "Luis", ciudad: "Barcelona" },
+  { nombre: "Carla", ciudad: "Madrid" }
+];

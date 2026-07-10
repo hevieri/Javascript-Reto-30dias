@@ -1,47 +1,27 @@
 /*
-  DÍA 7: Functions - declaración, expresión, arrow, default params
+  DÍA 7: Functions - declaración, arrow functions, callbacks, default params
 
   Instrucciones:
-  1. FACTORIAL:
-     - Función factorial(n) que calcule n! (5! = 5*4*3*2*1)
-     - Hazla recursiva
+  1. CALCULAR IVA:
+     - Creá una función calcularIVA(precio) que reciba un precio y devuelva
+       el precio + IVA (21%). Ej: calcularIVA(100) → 121.
 
-  2. PALÍNDROMO:
-     - Función esPalindromo(str) que devuelva true/false
-     - Ignorar mayúsculas, espacios y tildes
+  2. FORMATEAR NOMBRE:
+     - Creá una función formatearNombre(nombre, apellido) que devuelva
+       "Apellido, N. Ej: formatearNombre("Ana", "Lopez") → "Lopez, A."
 
-  3. CALCULADORA con función como parámetro:
-     - Función operar(a, b, callback) que ejecute la operación
-     - Pasa sumar, restar, multiplicar, dividir como callbacks
+  3. CALLBACK - CALCULADORA SIMPLE:
+     - Creá una función operar(a, b, callback) que ejecute la operación
+     - Pasale sumar y restar como callbacks (funciones flecha)
 
   4. Parámetros default:
-     - Función saludar(nombre = "amigo", idioma = "es") que salude
-       en español, inglés o portugués
+     - Creá una función crearMensaje(producto, precio = 0, descuento = 0)
+       que devuelva "Producto: [nombre] - $[precio con descuento]"
+       Ej: crearMensaje("Remera", 1000, 0.1) → "Producto: Remera - $900"
 
   +++ EJERCICIO EXTRA +++
-  - Creá una función que reciba un número y devuelva true si es par, false si es impar
-  - Creá una función que reciba un array de números y devuelva solo los pares (usando la función anterior)
+  - Creá una función que reciba un array de precios, le aplique IVA a cada uno
+    usando map, y devuelva el nuevo array
 */
 
 // --- Tu código aquí ---
-//1.
-function factorial(n){
-   if(n === 0 || n === 1) {
-      return 1;
-   }
-   return n * factorial(n - 1);
-}
-
-//4.
-function saludar(nombre = "amigo", idioma = "es") {
-   switch (idioma) {
-      case "es":
-         return `Hola, ${nombre}!`;
-      case "en":
-         return `Hello, ${nombre}!`;
-      case "pt":
-         return `Olá, ${nombre}!`;
-      default:
-         return `Hola, ${nombre}!`;
-   }
-   
