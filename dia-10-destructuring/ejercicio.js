@@ -22,3 +22,11 @@
     b) Intercambiar el primer y último elemento
     c) Crear un objeto con todos los emails como propiedades
 */
+
+//1.
+const usuario = { id: 1, nombre: "Ana", email: "ana@mail.com", pais: "MX" }
+const { nombre, email, ...resto } = usuario
+
+console.log(nombre)  // "Ana"
+console.log(email)   // "ana@mail.com"
+console.log(resto)   // { id: 1, pais: "MX" }

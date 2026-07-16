@@ -523,6 +523,17 @@ const suma = nums.reduce((acum, n) => acum + n, 0) // 10
 
 const carrito = [{precio:10}, {precio:20}, {precio:30}]
 const total = carrito.reduce((acc, item) => acc + item.precio, 0) // 60` },
+      { tipo: 'texto', v: '<code>reduce(fn, valorInicial)</code> recorre el array y va <strong>acumulando</strong> un resultado. En cada vuelta, <code>acum</code> tiene el valor de la vuelta anterior, y <code>n</code> es el elemento actual. El <code>0</code> al final es el <strong>valor inicial</strong> del acumulador. Sin él, <code>acum</code> arrancaría siendo el primer elemento y recorrería desde el índice 1.' },
+      { tipo: 'texto', v: '<strong>¿Para qué sirve reduce?</strong> Sirve para <strong>transformar un array en un solo valor</strong> de cualquier tipo: número, string, objeto, otro array, lo que sea.' },
+      { tipo: 'lista', v: [
+        '<strong>Sumar precios</strong> de un carrito (el ejemplo de arriba)',
+        '<strong>Contar</strong> cuántas veces aparece cada palabra/letra → devuelve un objeto <code>{a: 3, b: 1, ...}</code>',
+        '<strong>Aplanar</strong> arrays anidados: <code>[[1,2], [3,4]]</code> → <code>[1,2,3,4]</code>',
+        '<strong>Agrupar</strong> objetos por una propiedad: <code>[{tipo:"fruta", nombre:"manzana"}, ...]</code> → <code>{fruta:[...], verdura:[...]}</code>',
+        '<strong>Concatenar</strong> strings de un array en un solo párrafo',
+        '<strong>Calcular</strong> máximo, mínimo, promedio, total',
+      ] },
+      { tipo: 'texto', v: 'Sin <code>reduce</code> harías un bucle <code>for</code> con una variable externa. <code>reduce</code> es ese bucle pero más declarativo. Pensalo así: <strong>"tengo un array, quiero reducirlo a una sola cosa"</strong> → <code>reduce</code>.' },
       { tipo: 'destacado', v: '<strong>💡</strong> <code>map</code> y <code>filter</code> crean un nuevo array. <code>reduce</code> devuelve lo que quieras (número, objeto, string, array...). Ninguno modifica el original.' },
       { tipo: 'ejercicio', v: 'Abrí dia-09-arrays-avanzado/ejercicio.js. map/filter/reduce, encadenamiento, agrupar por ciudad.' },
     ]
@@ -533,6 +544,7 @@ const total = carrito.reduce((acc, item) => acc + item.precio, 0) // 60` },
     subtitulo: 'Extraer y combinar datos fácilmente',
     contenido: [
       { tipo: 'texto', v: 'El destructuring permite extraer datos de arrays y objetos en variables individuales de forma concisa.' },
+      { tipo: 'destacado', v: '<strong>💡 Regla visual:</strong><br><br><code>const obj = { nombre: "Ana" }</code> → llaves a la <strong>derecha</strong> del <code>=</code>: estás <strong>creando</strong> un objeto<br><br><code>const { nombre } = obj</code> → llaves a la <strong>izquierda</strong> del <code>=</code>: estás <strong>extrayendo</strong> (destructuring)<br><br>El <code>=</code> siempre va de <strong>origen → destino</strong>. Derecha es de dónde sacás los datos, izquierda es dónde los ponés.' },
       { tipo: 'subtitulo', v: 'Destructuring de objetos' },
       { tipo: 'codigo', v: `const user = { id: 1, nombre: "Ana", email: "a@a.com", pais: "MX" }
 
@@ -541,6 +553,12 @@ console.log(nombre) // "Ana"
 
 // Renombrar
 const { nombre: userName } = user
+
+// Rest operator (...) — "todo lo demás"
+const { id, ...resto } = user
+// resto = { nombre: "Ana", email: "a@a.com", pais: "MX" }
+// Los ... en destructuring significan:
+// "agarrame todo lo que quede (lo que no pediste) y ponelo en esta variable"
 
 // Valor por defecto
 const { telefono = "sin teléfono" } = user

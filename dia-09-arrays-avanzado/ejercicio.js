@@ -46,16 +46,12 @@
     c) Personas agrupadas por ciudad (usando reduce)
 */
 
-const precios = [100, 250, 500, 1200, 80];
-const celsius = [0, 25, 30, 100, -5];
-const usuarios = [
-  { nombre: "Ana", edad: 25 },
-  { nombre: "Luis", edad: 30 },
-  { nombre: "Carla", edad: 22 }
-];
-const carrito = [1500, 2300, 800, 4200];
-const personas = [
-  { nombre: "Ana", ciudad: "Madrid" },
-  { nombre: "Luis", ciudad: "Barcelona" },
-  { nombre: "Carla", ciudad: "Madrid" }
-];
+//1.
+const preciosSinIVA = [100, 250, 500, 1200, 80];
+const preciosConIVA = preciosSinIVA.map(precio => precio * 1.21);
+console.log("Precios con IVA:", preciosConIVA);
+
+//2.
+const temperaturasCelsius = [0, 25, 30, 100, -5];
+const temperaturasFahrenheit = temperaturasCelsius.map( celsius => celsius * 9/5 + 32);
+console.log("Temperaturas en Fahrenheit:", temperaturasFahrenheit);
