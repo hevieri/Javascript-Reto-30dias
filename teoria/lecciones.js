@@ -607,7 +607,7 @@ sumarTodos(1, 2, 3, 4) // 10` },
     titulo: 'Sets y Maps',
     subtitulo: 'Colecciones modernas: sin duplicados, clave-valor',
     contenido: [
-      { tipo: 'texto', v: '<code>Set</code> almacena valores <strong>únicos</strong>. <code>Map</code> almacena pares clave-valor donde las claves pueden ser <strong>cualquier tipo</strong> (no solo strings).' },
+      { tipo: 'destacado', v: '<strong>💡 Set</strong> — pensalo como una <strong>lista que no deja meter repetidos</strong>. <code>new Set([1, 2, 2, 3])</code> → JS ve: "1 ok, 2 ok, 2 ya está no lo meto, 3 ok". Resultado: <code>Set {1, 2, 3}</code>.<br><br><strong>Casos de uso:</strong> eliminar duplicados con <code>[...new Set(array)]</code>, verificar si algo existe rápido con <code>.has()</code>, seguimiento de elementos visitados.<br><br><strong>💡 Map</strong> — pensalo como un <strong>objeto con superpoderes</strong>: las claves pueden ser <strong>cualquier cosa</strong> (números, objetos, funciones), no solo strings. En un objeto común las claves siempre se convierten a string: <code>obj[42]</code> → la clave es <code>"42"</code>. En un Map, <code>mapa.set(42, "hola")</code> → la clave <strong>sigue siendo el número 42</strong>.<br><br><strong>Casos de uso:</strong> caché/memoización (usar el objeto original como clave), contar frecuencias, asociar datos a objetos sin modificarlos.' },
       { tipo: 'subtitulo', v: 'Set' },
       { tipo: 'codigo', v: `const set = new Set([1, 2, 2, 3, 3, 3])
 console.log(set) // Set {1, 2, 3}

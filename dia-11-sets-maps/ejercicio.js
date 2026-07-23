@@ -31,3 +31,10 @@
   - Dado un array de productos en stock, usá un Set para saber
     cuántos tipos de producto diferentes hay
 */
+
+
+//1.
+const carrito = ["remera", "pantalon", "remera", "zapatilla", "pantalon"]
+const productosUnicos = new Set(carrito)
+
+console.log(productosUnicos) 
